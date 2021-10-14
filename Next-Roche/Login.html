@@ -1,0 +1,64 @@
+ <!doctype html>
+<html lang="pt-BR">
+<script src="/js/Dados.js"></script>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="/css/bootstrap.css" rel="stylesheet">
+  <link href="/css/style_login.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+    </style>
+
+  <title>B-onde</title>
+</head>
+
+<body>
+  <section class="Form my-5 mx-5 ">
+    <div class="container">
+      <!-- imagem -->
+      <div class="row">
+        <div class="col-lg-7 mt-3">
+          <img src="/images/doctor-login.svg" class="image-fluid" alt="">
+        </div>
+        <!-- FORM -->
+        <div class="col-lg-5 px-5 pt-3">
+          <h1 class="login-text pt-3">LOGIN</h1>
+          <h6>Digite suas credenciais!</h6>
+          <form>
+            <!-- email -->
+            <div class="form-row">
+              <div class="col-lg-7">
+                <input type="email" placeholder="Seu email" id="nome" pattern=".+@globex\.com" autocomplete="off" class="form-control my-3 p-2">
+              </div>
+            </div>
+            <!-- senha -->
+            <div class="form-row">
+              <div class="col-lg-7">
+                <input type="password" placeholder="Senha" id="senha" autocomplete="off" class="form-control my-3 p-2">
+              </div>
+            </div>
+            <!-- button -->
+            <div class="form-row">
+              <div class="col-lg-7 mb-3">
+                <button onclick="Dados()" class="bt-login">LOGIN</button>
+              </div>
+            </div>
+            <a href="#" style="font-size:12px"> Esqueci minha senha</a>
+            <p class="mt-2" style="font-size:12px"> Ainda não tem cadastro? <a href="cadastro.html">Faça seu registro!</a></p>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="/js/jquery.js"></script>
+  <script src="/js/popper.js"></script>
+  <script src="/js/bootstrap.js"></script>
+</body>
+
+</html>
