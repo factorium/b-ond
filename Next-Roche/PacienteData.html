@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro dos Pacientes</title>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="JS/cadastroData.js"></script>
+</head>
+<body>
+    <form>
+        <h1>Cadastro dos Pacientes</h1>
+        <h3>Insira os seus dados:</h3>
+        Nome: <input type="text" id="nome" autocomplete="off">
+        <br><br>
+        CPF: <input type="number" id="cpf" autocomplete="off">
+        <br><br>
+        Idade: <input type="number" id="idade" autocomplete="off">
+        <br><br>
+        Convênio: <input type="text" id="convenio" autocomplete="off">
+        <h3>Sexo:</h3>
+        Masculino <input type="radio" name="sexo" value="masc">
+        <br><br>
+        Feminino <input type="radio" name="sexo" value="fem">
+        <br><br>
+        Outros <input type="radio" name="sexo" value="outros">
+        <br><br>
+    </form>
+    <button onclick="cadastrar()">Cadastrar</button>
+
+    <form>
+        <h3>Adicionar Dados</h3>
+        <h4>Dados do Paciente:</h4>
+        <h5>--> Dados Básicos:</h5>
+        Data da Triagem: <input type="text" id="dataTri">
+        <br><br>
+        Batimentos Cardiacos: <input type="number" id="bpm">
+        <br><br>
+        Pressão: <input type="text" id="pressao">
+        <br><br>
+        Temperatura: <input type="number" id="temp">
+        <br><br>
+        Observações: <input type="text" id="obs">
+        <h5>--> Alergias:</h5>
+        Remédios: <input type="text" id="remedios">
+        <br><br>
+        Animais: <input type="text" id="animais">
+        <br><br>
+        Outros: <input type="text" id="outros">
+        <br><br>
+    </form>
+    <button onclick="addData()">Salvar</button>
+    
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCnO6ishyyTwur86_PYbn8CpRq2mXwS9_o",
+            authDomain: "rochebase-4207d.firebaseapp.com",
+            databaseURL: "https://rochebase-4207d-default-rtdb.firebaseio.com/",
+            projectId: "rochebase-4207d",
+            storageBucket: "rochebase-4207d.appspot.com",
+            messagingSenderId: "83362904349",
+            appId: "1:83362904349:web:32fee7da5f0153581b89f4",
+            measurementId: "G-RP35ZXFRYH"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        const storage = firebase.storage();
+        var storageRef = storage.ref();
+    </script>
+</body>
+</html>
